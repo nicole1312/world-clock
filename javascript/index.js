@@ -1,4 +1,5 @@
 function updateTime(){
+
  let londonElement=document.querySelector("#london");
   if (londonElement){
      let londonDateElement=londonElement.querySelector(".date");
@@ -26,6 +27,7 @@ function updateTime(){
      sydneyDateElement.innerHTML=sydneyTime.format("dddd, MMMM Do YYYY");
      sydneyTimeElement.innerHTML=sydneyTime.format("h:mm:ss [<small>]A[</small>]");
     } 
+    
 }
 
 function updateCity(event){
@@ -33,7 +35,7 @@ function updateCity(event){
      if(cityTimeZone==="current-location"){
         cityTimeZone=moment.tz.guess();
      }
-
+      
    let cityName=cityTimeZone.replace("_", " ").split("/")[1];
    let cityTime= moment().tz(cityTimeZone);
    let citiesElement=document.querySelector("#cities");
@@ -46,7 +48,10 @@ function updateCity(event){
      <div class="time">${cityTime.format("h:mm:ss")} <small>${cityTime.format("A")} </small> </div>
    </div>
    `; 
+   document.querySelector("#start-page").classList.add("d-block");
+
  }
+
 
  let citiesSelectElement=document.querySelector("#city");
  citiesSelectElement.addEventListener("change", updateCity);
