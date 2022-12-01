@@ -9,6 +9,7 @@ function updateTime(){
      londonDateElement.innerHTML=londonTime.format("dddd, MMMM Do YYYY");
      londonTimeElement.innerHTML=londonTime.format("h:mm:ss [<small>]A[</small>]");
     }
+
  let stockholmElement=document.querySelector("#stockholm");
   if (stockholmElement){
      let stockholmDateElement=stockholmElement.querySelector(".date");
@@ -29,7 +30,6 @@ function updateTime(){
     } 
     
 }
-
 function updateCity(event){
    let cityTimeZone = event.target.value;
      if(cityTimeZone==="current-location"){
@@ -43,20 +43,25 @@ function updateCity(event){
    <div class="city">
      <div>
        <h2> ${cityName} </h2>
-       <div class="date"> ${cityTime.format("dddd, MMMM Do YYYY")}</div>
+       <div class="date"> 
+         ${cityTime.format("dddd, MMMM Do YYYY")}
+       </div>
      </div> 
      <div class="time">${cityTime.format("h:mm:ss")} <small>${cityTime.format("A")} </small> </div>
    </div>
    `; 
    document.querySelector("#start-page").classList.add("d-block");
-
  }
 
 
  let citiesSelectElement=document.querySelector("#city");
  citiesSelectElement.addEventListener("change", updateCity);
-   
-
+ 
  updateTime();
- setInterval(updateTime, 1000);
+ setInterval(updateTime, 1);
+ 
+
+ 
+ 
+
  

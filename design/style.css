@@ -49,7 +49,6 @@ h1{
     padding: 10px 0 ;
     text-shadow: 2px 2px 2px  rgba(97, 129, 157, 0.8);
 }
-
 .date{
     color: #07648c;
     font-family:'Abril Fatface', cursive ;
@@ -79,7 +78,6 @@ display: none;
 .d-block{
     display: block;
 }
-
 .start-cities{
     color: #045578;
     font-family:'Poppins', sans-serif;
@@ -98,6 +96,9 @@ i{
                  0 0 21px #efefef;
 }
 footer{
+    position: fixed;
+    top: 96%;
+    left: 43%;
     color:#f5c732;
     font-family:'Poppins', sans-serif;
     font-size: 17px;
@@ -109,10 +110,29 @@ footer{
     color: #efefef;
     font-size: 15px;
     font-weight: 800;
-    text-decoration: none;
-    
+    text-decoration: none;   
 }
-
 a:hover{
     color:#89c2eb;
+}
+@media(max-width: 800px){
+    body{
+        background-size:inherit;
+        background-position: center;
+        margin: 0;
+    }
+    .container{
+        background:rgba(255, 255, 255, 0.4);
+        border-radius: 0;
+        margin: 0;
+    }
+    select{
+        font-size: 14px;
+        padding: 4px;
+    }
+    h1{
+        font-size: 30px;
+        margin-top: -30px;
+      
+    }
 }
