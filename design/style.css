@@ -1,8 +1,8 @@
 body{
     background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9f84e2f5-86e6-42f5-a3c0-584f2ed29ff1/d8yrmwn-c3932627-8493-4564-bb40-4c66e3b3b392.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzlmODRlMmY1LTg2ZTYtNDJmNS1hM2MwLTU4NGYyZWQyOWZmMVwvZDh5cm13bi1jMzkzMjYyNy04NDkzLTQ1NjQtYmI0MC00YzY2ZTNiM2IzOTIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.HrD8dnLpKIcI9DPJPfCOt14_oFanlngtbodOfh9Adbg);
     background-repeat: no-repeat;
-    background-size: cover;  
-    margin-bottom: 30px;
+    background-size: cover; 
+    margin: auto;
 }
 .container{
     background-color: rgba(255, 254, 254, 0.6);
@@ -12,7 +12,7 @@ body{
                 0 0 12px #efefef,
                 0 0 21px #efefef;
     margin: 100px auto;
-    max-width: 500px;
+    max-width: 550px;
     padding: 60px ;
 }
 select{
@@ -97,8 +97,8 @@ i{
 }
 footer{
     position: fixed;
-    top: 96%;
-    left: 43%;
+    top: 97%;
+    left: 44%;
     color:#f5c732;
     font-family:'Poppins', sans-serif;
     font-size: 17px;
@@ -117,22 +117,39 @@ a:hover{
 }
 @media(max-width: 800px){
     body{
+        
         background-size:inherit;
         background-position: center;
-        margin: 0;
+        
     }
     .container{
-        background:rgba(255, 255, 255, 0.4);
-        border-radius: 0;
-        margin: 0;
+        margin: 34px 20px;
+        padding:60px 20px;
     }
     select{
-        font-size: 14px;
+        font-size: 18px;
         padding: 4px;
     }
     h1{
         font-size: 30px;
-        margin-top: -30px;
-      
+        margin-top: -30px; 
+    }
+    .city{
+        display: block;
+        font-size: 16px;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+   .date{
+    font-size: 14px;
+   }
+   .time{
+   margin-top: 20px;
+   }
+    footer,
+    .coder{
+        font-size: 12px;
+        left:25%;
     }
 }
